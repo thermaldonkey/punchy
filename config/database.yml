@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: punchy_production
-  username: punchy
   password: <%= ENV['PUNCHY_DATABASE_PASSWORD'] %>
