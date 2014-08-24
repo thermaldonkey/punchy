@@ -1,0 +1,67 @@
+<%= form_for(@punch) do |f| %>
+  <% if @punch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@punch.errors.count, "error") %> prohibited this punch from being saved:</h2>
+
+      <ul>
+      <% @punch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :current_date %><br />
+    <%= f.text_field :current_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.text_field :department, {placeholder: "DEPT", maxlength: 5} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :initials %><br />
+    <%= f.text_field :initials, {maxlength: 3} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :week_end_date %><br />
+    <%= f.text_field :week_end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :issue %><br />
+    <%= f.text_field :issue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.text_field :start_time, {placeholder: "HH:MM", maxlength: 5, title: "Military time"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.text_field :end_time, {placeholder: "HH:MM", maxlength: 5, title: "Military time"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :activity %><br />
+    <%= f.text_field :activity, {maxlength: 3, title: "See appropriate activities"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
