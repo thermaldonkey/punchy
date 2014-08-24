@@ -1,6 +1,6 @@
 class PunchesController < ApplicationController
   def index
-    @punches = Punch.all
+    @punches = policy_scope(Punch)
   end
 
   def new
@@ -30,6 +30,7 @@ class PunchesController < ApplicationController
         :end_time,
         :activity,
         :notes,
+        :user_id,
       )
     end
 end

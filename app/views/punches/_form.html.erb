@@ -61,6 +61,10 @@
     <%= f.text_field :notes %>
   </div>
 
+  <div class="field">
+    <%= f.hidden_field :user_id, {value: current_user.id} %>
+  </div>
+
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
   </div>
