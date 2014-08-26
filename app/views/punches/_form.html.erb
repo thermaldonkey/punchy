@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :department %><br />
-    <%= f.text_field :department, {placeholder: "DEPT", maxlength: 5} %>
+    <%= f.text_field :department, {value: @current_user_dept, maxlength: 5} %>
   </div>
 
   <div class="field">
     <%= f.label :initials %><br />
-    <%= f.text_field :initials, {maxlength: 3} %>
+    <%= f.text_field :initials, {value: @current_user_initials, maxlength: 3} %>
   </div>
 
   <div class="field">
@@ -59,6 +59,10 @@
   <div class="field">
     <%= f.label :notes %><br />
     <%= f.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, {value: current_user.id} %>
   </div>
 
   <div class="field">

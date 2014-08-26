@@ -5,6 +5,8 @@ class PunchesController < ApplicationController
 
   def new
     @punch = Punch.new
+    @current_user_dept = current_user.department
+    @current_user_initials = current_user.initials
   end
 
   def create

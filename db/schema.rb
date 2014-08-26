@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20140824182740) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "department",             default: ""
+    t.string   "initials",               default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end
