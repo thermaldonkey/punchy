@@ -44,4 +44,4 @@ gem 'pundit'
 gem 'rails_12factor', group: :production
 
 # For heroku
-ruby "2.1.1"
+ruby "2.1.2"
