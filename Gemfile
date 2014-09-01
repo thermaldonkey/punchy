@@ -43,5 +43,10 @@ gem 'pundit'
 # For heroku
 gem 'rails_12factor', group: :production
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'active_mocker'
+end
+
 # For heroku
 ruby "2.1.2"
