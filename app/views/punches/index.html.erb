@@ -14,6 +14,7 @@
       <th>End Time</th>
       <th>Activity</th>
       <th>Notes</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,7 @@
         <td><%= punch.end_time %></td>
         <td><%= punch.activity %></td>
         <td><%= punch.notes %></td>
+        <td><%= link_to "Edit", edit_punch_path(punch) %></td>
       </tr>
     <% end %>
   </tbody>

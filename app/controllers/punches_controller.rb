@@ -18,6 +18,20 @@ class PunchesController < ApplicationController
     end
   end
 
+  def edit
+    @punch = Punch.find(params[:id])
+  end
+
+  def update
+    @punch = Punch.find(params[:id])
+    if @punch.update!(punches_params)
+      flash[:notice] = "P-PUNCHED!?!"
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   private
 
     def punches_params
